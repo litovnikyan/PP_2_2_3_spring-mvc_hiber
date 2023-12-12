@@ -42,12 +42,6 @@ public class UserController {
         return "user/user-info";
     }
 
-    @GetMapping("user/update")
-    public String updateUser(@ModelAttribute("user") User user) {
-        userService.saveUser(user);
-        return "redirect:/";
-    }
-
     @GetMapping("user/deleteUser")
     public String removeUser(@RequestParam("id") int id) {
         userService.removeUser(id);
